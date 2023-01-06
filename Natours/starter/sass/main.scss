@@ -1,4 +1,3 @@
-
 // Abstracts Folder
 @import "./abstracts/functions";
 @import "./abstracts/mixins";
@@ -18,6 +17,7 @@
 
 // Layout Folder
 @import "./layout/header";
+@import "./layout/grid";
 
 /* nesting the element  
 .header__logo-box {

@@ -1,0 +1,55 @@
+.row {
+  // Standard convertirlo en una cuadricula de 1140px to rem
+  // max width y width diferencia
+  max-width: $grid-width;
+  background-color: #eeeeee;
+  // Trick para centrar esta fila en el viewport
+  // basicamente hace que el espacio a la izquierda y a la derecha sea exactamente igual haciendo que
+  // se centre el elemento
+  margin: 0 auto;
+
+  // crear psudo class para que el ultimo elemento no tenga margin botton
+  // seleccionar todo menos el ultimo elemento para que no tenga margin bottom
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    background-color: orangered;
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 *#{$gutter-horizontal}
+    );
+  }
+}
