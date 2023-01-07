@@ -2,7 +2,6 @@
   // Standard convertirlo en una cuadricula de 1140px to rem
   // max width y width diferencia
   max-width: $grid-width;
-  background-color: #eeeeee;
   // Trick para centrar esta fila en el viewport
   // basicamente hace que el espacio a la izquierda y a la derecha sea exactamente igual haciendo que
   // se centre el elemento
@@ -17,7 +16,6 @@
   @include clearfix;
 
   [class^="col-"] {
-    background-color: orangered;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
